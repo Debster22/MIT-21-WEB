@@ -92,6 +92,9 @@ button {
 /* Медиа-запросы для экранов до 768px */
 /* Медиа-запросы для экранов до 480px */
 @media (max-width: 480px) {
+  .menu {
+    max-height: none !important;
+  }
   .formulas_s {
     margin: 1.4rem 0.8rem !important;
     border-radius: 0.5rem !important;
@@ -221,7 +224,6 @@ index-page
   font-weight: bold;
   margin-top: 2rem;
   font-size: 2rem;
-  margin: 1rem;
 }
 
 .container {
@@ -249,6 +251,7 @@ th, td {
 .menu {
   background-color: white;
   width: 100%;
+  max-height: 3rem;
   display: flex;
   margin: 1rem 0;
   border-radius: 0.3rem;
@@ -256,7 +259,7 @@ th, td {
 }
 
 .menu_button {
-  padding: 0.8rem 1.6rem;
+  padding: 0.9rem 1.6rem;
 }
 
 .menu_button:hover {
@@ -276,8 +279,7 @@ th, td {
 }
 
 .menu_radio:checked + .menu_button {
-  background-color: black;
-  color: white;
+  border-bottom: 3px solid rgb(255, 0, 0);
 }
 
 .menu_radio:first-child + .menu_button {
@@ -443,7 +445,7 @@ content-page
 
 /* 
 -------------------------------------------------------------------
-formulas-page
+formula-page
 -------------------------------------------------------------------
 */
 .flex_0 {
@@ -507,12 +509,12 @@ formulas-page
   display: flex;
   gap: 0.8rem;
   padding: 1.1rem;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid rgba(208, 208, 208, 0.462745098);
 }
 
 .book_icon {
   border-radius: 0.3rem;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(208, 208, 208, 0.462745098);
 }
 
 .book_content_title {
@@ -538,8 +540,8 @@ formulas-page
 }
 
 .books_content {
-  overflow: auto;
-  max-height: 19rem;
+  overflow: hidden;
+  max-height: 14.25rem;
   margin: 0.2rem 0;
 }
 
@@ -558,7 +560,7 @@ formulas-page
 .checkbox_square {
   width: 100%;
   display: flex;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid rgba(208, 208, 208, 0.462745098);
 }
 .checkbox_square .book_content {
   border-bottom: none;
@@ -580,7 +582,7 @@ formulas-page
   color: black;
   padding: 0.3rem;
   border-radius: 0.3rem;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(208, 208, 208, 0.462745098);
 }
 
 .checkbox_square:last-child {
@@ -591,7 +593,7 @@ formulas-page
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid rgba(208, 208, 208, 0.462745098);
 }
 
 .checkbox_some .checkbox_square {
@@ -640,4 +642,21 @@ formulas-page
 
 #home {
   cursor: pointer;
+}
+
+.t-stylish {
+  padding: 0.5rem 0 0.5rem 0;
+  text-align: center;
+  color: rgb(113, 113, 113);
+  border-bottom: 1px solid rgba(208, 208, 208, 0.462745098);
+}
+
+.book_input {
+  display: none;
+}
+
+.book_radio {
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
 }
